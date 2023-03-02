@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <AppBar position="static">
         <Toolbar sx={{backgroundColor: '#282c34'}}>
-          <Typography variant="h6" sx={{color: 'white', fontWeight: 'bold', font: 'arial'}}>
+          <Typography variant="h6"  >
             Carshop
           </Typography>
         </Toolbar>
