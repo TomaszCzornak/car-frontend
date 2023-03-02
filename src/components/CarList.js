@@ -13,7 +13,8 @@ function CustomToolbar() {
   );
 }
 
-function Carlist() {
+function CarList() {
+
   const [cars, setCars] = useState([]);
   const [open, setOpen] = useState(false);
 
@@ -115,7 +116,7 @@ function Carlist() {
     <React.Fragment>
       <AddCar addCar={addCar} />
       <div style={{ height: 500, width: '100%' }}>
-        <DataGrid 
+        <DataGrid sx={{color:'darkblue', boxShadow:10, borderColor:'white'}}
           rows={cars} 
           columns={columns} 
           disableSelectionOnClick={true}
@@ -133,4 +134,4 @@ function Carlist() {
   );
 }
 
-export default Carlist;
+export default CarList;
