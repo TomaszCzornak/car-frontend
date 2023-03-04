@@ -108,9 +108,7 @@ function CarList() {
       renderCell: row => 
                     <button style={{backgroundColor: 'dodgerblue',
                       color: 'white',
-                      fontsize: '20px',
                       padding: '5px 10px',
-                      // borderRadius: '5px',
                       margin: '10px 0px',
                       cursor: 'pointer',
                       borderRadius: '5px'}}

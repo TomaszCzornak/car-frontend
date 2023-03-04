@@ -44,9 +44,7 @@ function EditCar(props) {
     <div>
       <button style={{backgroundColor: 'dodgerblue',
         color: 'white',
-        fontsize: '5px',
         padding: '5px 10px',
-        // borderRadius: '5px',
         margin: '10px 10px',
         cursor: 'pointer',
         borderRadius: '5px'}} onClick={handleClickOpen}>Edytuj</button>
