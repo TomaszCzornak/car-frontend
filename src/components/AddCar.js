@@ -37,7 +37,14 @@ function AddCar(props) {
   
   return(
     <div>
-      <button onClick={handleClickOpen}>New Car</button>
+      <button  style={{backgroundColor: 'green',
+        color: 'white',
+        fontsize: '20px',
+        padding: '5px 10px',
+        // borderRadius: '5px',
+        margin: '10px 0px',
+        cursor: 'pointer',
+        borderRadius: '5px'}} onClick={handleClickOpen} >New Car</button>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>New car</DialogTitle>
         <DialogContent>

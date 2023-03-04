@@ -42,9 +42,16 @@ function EditCar(props) {
 
   return(
     <div>
-      <button onClick={handleClickOpen}>Edit</button>
+      <button style={{backgroundColor: 'dodgerblue',
+        color: 'white',
+        fontsize: '5px',
+        padding: '5px 10px',
+        // borderRadius: '5px',
+        margin: '10px 10px',
+        cursor: 'pointer',
+        borderRadius: '5px'}} onClick={handleClickOpen}>Edytuj</button>
       <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>Edit car</DialogTitle>
+          <DialogTitle>Edytuj Produkt</DialogTitle>
           <DialogContent>
             <input placeholder="Brand" name="brand" 
               value={car.brand} onChange={handleChange}/><br/> 

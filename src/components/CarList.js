@@ -93,7 +93,7 @@ function CarList() {
     {field: 'price', headerName: 'Price', width: 150},
     {
       field: '_links.car.href', 
-      headerName: '', 
+      headerName: '',
       sortable: false,
       filterable: false,
       renderCell: row => <EditCar 
@@ -106,14 +106,21 @@ function CarList() {
       sortable: false,
       filterable: false,
       renderCell: row => 
-                    <button 
+                    <button style={{backgroundColor: 'dodgerblue',
+                      color: 'white',
+                      fontsize: '20px',
+                      padding: '5px 10px',
+                      // borderRadius: '5px',
+                      margin: '10px 0px',
+                      cursor: 'pointer',
+                      borderRadius: '5px'}}
                       onClick={() => onDelClick(row.id)}>Delete
                     </button>
     }
   ];
   
   return(
-    <React.Fragment>
+  <React.Fragment>
       <AddCar addCar={addCar} />
       <div style={{ height: 500, width: '100%' }}>
         <DataGrid sx={{color:'darkblue', boxShadow:10, borderColor:'white'}}
@@ -127,7 +134,7 @@ function CarList() {
           open={open}
           autoHideDuration={2000}
           onClose={() => setOpen(false)}
-          message="Car deleted"
+          message="Samochód został usunięty"
         />
       </div>
     </React.Fragment>
