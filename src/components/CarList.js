@@ -4,11 +4,11 @@ import { DataGrid, GridToolbarContainer, GridToolbarExport, gridClasses } from '
 import Snackbar from '@mui/material/Snackbar';
 import AddCar from './AddCar.js';
 import EditCar from './EditCar.js';
-
+import background from "../img/back.JPG";
 function CustomToolbar() {
   return (
-    <GridToolbarContainer className={gridClasses.toolbarContainer}>
-      <GridToolbarExport />
+    <GridToolbarContainer className={gridClasses.toolbarContainer} >
+      <GridToolbarExport style={{color:'white'}} />
     </GridToolbarContainer>
   );
 }
@@ -97,7 +97,7 @@ function CarList() {
       sortable: false,
       filterable: false,
       renderCell: row => <EditCar 
-                            data={row} 
+                            data={row}
                             updateCar={updateCar} />
     },
     {
@@ -106,7 +106,7 @@ function CarList() {
       sortable: false,
       filterable: false,
       renderCell: row => 
-                    <button style={{backgroundColor: 'dodgerblue',
+                    <button style={{backgroundColor: 'orangered',
                       color: 'white',
                       padding: '5px 10px',
                       margin: '10px 0px',
@@ -121,7 +121,7 @@ function CarList() {
   <React.Fragment>
       <AddCar addCar={addCar} />
       <div style={{ height: 500, width: '100%' }}>
-        <DataGrid sx={{color:'darkblue', boxShadow:10, borderColor:'white'}}
+        <DataGrid sx={{color:'whitesmoke', boxShadow:10, borderColor:'white', backgroundImage: `url(${background})` }}
           rows={cars} 
           columns={columns} 
           disableSelectionOnClick={true}

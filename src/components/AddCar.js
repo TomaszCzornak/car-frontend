@@ -42,9 +42,9 @@ function AddCar(props) {
         padding: '5px 10px',
         margin: '10px 0px',
         cursor: 'pointer',
-        borderRadius: '5px'}} onClick={handleClickOpen} >New Car</button>
+        borderRadius: '5px'}} onClick={handleClickOpen} >Nowy Samochód</button>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>New car</DialogTitle>
+        <DialogTitle>Nowe auto</DialogTitle>
         <DialogContent>
           <input placeholder="Brand" name="brand" 
             value={car.brand} onChange={handleChange}/><br/> 
