@@ -8,7 +8,7 @@ import EditCar from './EditCar.js';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import {Logout} from "@mui/icons-material";
+import Loggingout from "./Logginout";
 
 function CustomToolbar() {
     return (
@@ -41,7 +41,10 @@ function CarList() {
         if (window.confirm("Are you sure to delete?")) {
             const token = sessionStorage.getItem("jwt");
 
-            fetch(url, {method: 'DELETE',headers: { 'Authorization' : token }})
+            fetch(url, {
+                method: 'DELETE',
+                headers: {'Authorization' : token }
+        })
                 .then(response => {
                     if (response.ok) {
                         fetchCars();
@@ -60,7 +63,8 @@ function CarList() {
         fetch(SERVER_URL + 'api/cars',
             {
                 method: 'POST', headers: {
-                    'Content-Type': 'application/json',headers: { 'Authorization' : token }
+                    'Content-Type': 'application/json',
+                    'Authorization' : token
                 },
                 body: JSON.stringify(car)
             })
@@ -81,7 +85,8 @@ function CarList() {
             {
                 method: 'PUT',
                 headers: {
-                    'Content-Type': 'application/json',headers: { 'Authorization' : token }
+                    'Content-Type': 'application/json',
+                    'Authorization' : token
                 },
                 body: JSON.stringify(car)
             })
@@ -125,8 +130,8 @@ function CarList() {
 
     return (
         <React.Fragment>
+            <Loggingout/>
             <Stack mt={2} mb={2}>
-                <Logout/>
                 < AddCar style={{background: 'green'}} addCar={addCar}/>
             </Stack>
 

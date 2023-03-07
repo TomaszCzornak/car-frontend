@@ -7,6 +7,7 @@ import Snackbar from '@mui/material/Snackbar';
 
 import { SERVER_URL } from '../constants.js';
 
+
 function Login() {
   const [user, setUser] = useState({
     username: '', 
@@ -18,6 +19,8 @@ function Login() {
   const handleChange = (event) => {
     setUser({...user, [event.target.name] : event.target.value});
   }
+
+
   
   const login = () => {
     fetch(SERVER_URL + 'login', {
